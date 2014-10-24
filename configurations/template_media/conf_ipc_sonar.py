@@ -21,7 +21,7 @@ __author__ = 'sonia'
 
 
 #Configurations -> TemplateMedia
-from SeaGoatVision.server.media.implementation.ipc import IPC_Sonar
+from SeaGoatVision.server.media.implementation.ipc_sonar import IPC_Sonar
 
 
 

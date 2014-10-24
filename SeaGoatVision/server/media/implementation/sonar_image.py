@@ -1,8 +1,7 @@
-
-import numpy as np
 from PIL import Image
-import struct
 from PIL import ImageDraw
+import numpy as np
+import struct
 
 
 class SonarImage():

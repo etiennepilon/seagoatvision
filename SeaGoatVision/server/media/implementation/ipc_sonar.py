@@ -11,10 +11,10 @@ __author__ = 'sonia'
 from SeaGoatVision.server.media.media_streaming import MediaStreaming
 from SeaGoatVision.commons.param import Param
 from SeaGoatVision.server.core.configuration import Configuration
+from SeaGoatVision.server.media.implementation.sonar_image import SonarImage
 from SeaGoatVision.commons import log
 import thread
 import zmq
-import SonarImage
 import struct
 
 
