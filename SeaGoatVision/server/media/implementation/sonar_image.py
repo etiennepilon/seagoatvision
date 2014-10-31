@@ -1,7 +1,8 @@
-from PIL import Image
-from PIL import ImageDraw
+
 import numpy as np
+from PIL import Image
 import struct
+from PIL import ImageDraw
 
 
 class SonarImage():
@@ -16,13 +17,12 @@ class SonarImage():
         #The image that will be passed to the filter chain
         self.sonarImage = None
         #The image workspace where new acquisitions will be made
-       # self.workspaceImage = None
         self.imageCenter_x_y = None
         self.stepAngleSize = None
         self.numberOfBins = None
         self.angleMin = None
         self.angleMax = None
-       # self.arcPainter = None
+
 
         self.newImageFlag = False
 
@@ -55,6 +55,9 @@ class SonarImage():
         self.sonarImage = np.add(self.sonarImage, workspaceImage)
 
         if angle == self.angleMax or angle == self.angleMin:
-            return self.sonarImage
+            #Reset mechanism
+            image = self.sonarImage
+            self.sonarImage = Image.new('1', (2*self.numberOfBins, self.numberOfBins), 1)
+            return image
 
         return

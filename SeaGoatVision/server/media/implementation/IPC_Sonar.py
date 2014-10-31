@@ -11,10 +11,11 @@ __author__ = 'sonia'
 from SeaGoatVision.server.media.media_streaming import MediaStreaming
 from SeaGoatVision.commons.param import Param
 from SeaGoatVision.server.core.configuration import Configuration
-from SeaGoatVision.server.media.implementation.sonar_image import SonarImage
 from SeaGoatVision.commons import log
+from SeaGoatVision.server.media.implementation.sonar_image import SonarImage
 import thread
 import zmq
+
 import struct
 
 
@@ -92,6 +93,7 @@ class IPC_Sonar(MediaStreaming):
 
         if not image:
             return
+
 
         return image
 
